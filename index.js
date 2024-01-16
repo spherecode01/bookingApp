@@ -33,6 +33,10 @@ app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 
+app.get('/test', (req, res) => {
+  res.json('test OK');
+});
+
 app.use((req,res,next,)=>{
   console.log("i am middleware");
 })
