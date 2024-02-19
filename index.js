@@ -27,7 +27,7 @@ mongoose.connection.on("disconnected", () => {
   });
 
   app.use(cors({
-    origin: 'https://helpful-muffin-78b947.netlify.app'
+    origin: 'https://booking-app-obdh.onrender.com'
 }));
  app.use(cookieParser());
  app.use(express.json());
