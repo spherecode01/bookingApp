@@ -6,6 +6,7 @@ import roomsRoute from "./api/routes/rooms.js";
 import usersRoute from "./api/routes/users.js";
 import hotelsRoute from "./api/routes/hotels.js";
 import cookieParser from "cookie-parser";
+import cors from 'cors';
 
 
 
@@ -25,6 +26,9 @@ mongoose.connection.on("disconnected", () => {
     console.log("mongoDB disconnected!");
   });
 
+  app.use(cors({
+    origin: 'https://helpful-muffin-78b947.netlify.app'
+}));
  app.use(cookieParser());
  app.use(express.json());
 
