@@ -15,6 +15,7 @@ const useFetch = () => {
         const res = await axios.get(backendUrl);
         setData(res.data);
         console.log(data, "this is data")
+        
       } catch (err) {
         setError(err);
       }
